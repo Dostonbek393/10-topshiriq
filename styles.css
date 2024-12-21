@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  background-color: rgb(255, 239, 239);
+  position: relative;
+  justify-content: end;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  background-color: #bdbdbd;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle:checked + .hamburger .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.menu-toggle:checked + .hamburger .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked + .hamburger .bar:nth-child(3) {
+  transform: rotate(-35deg) translateY(-13px);
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  margin: 15px 0;
+  margin-bottom: 20px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links ul li a:hover {
+  color: #ff6600;
+}
+
+.menu-toggle:checked ~ .nav-links {
+  display: block;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.nav-text {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 15px 25px;
+  text-align: center;
+}
+
+.nav_texts {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 15px 25px;
+  text-align: center;
+}
+
+.nav-one {
+  background-color: white;
+  width: 350px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+}
+
+.nav-two {
+  background-color: black;
+  width: 350px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.nav-link1 {
+  margin-top: 25px;
+}
+
+.nav-title {
+  display: flex;
+  gap: 300px;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 20px;
+}
